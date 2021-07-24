@@ -27,7 +27,7 @@ export function Home() {
             })
             
             const link = response.data;
-            link.url = `http://localhost:3000/${link.code}`;
+            link.url = `https://shortly-ff06b.web.app/${link.code}`;
 
             setCreatedLink(link);
             setUrl("");
@@ -56,7 +56,7 @@ export function Home() {
                 <Button onClick={handleCreate}>Encurtar URL</Button>
                 {
                     createdLink && (
-                        <Url onClick={handleCopy}>Copiar URL</Url>
+                        <Url url={createdLink.url} onClick={handleCopy}/>
                     )
                 }
             </Content>

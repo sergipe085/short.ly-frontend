@@ -5,13 +5,13 @@ import { FiCopy } from "react-icons/fi";
 import { Container } from "./styles"
 
 interface UrlProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    children: ReactNode;
+    url: string;
 }
 
-export function Url({ children, ...rest }: UrlProps) {
+export function Url({ url, ...rest }: UrlProps) {
     return (
         <Container { ...rest }>
-            <p>https://localhost3000/128Djs0</p>
+            <p>{ url }</p>
             <div>
                 <FiCopy size={20}/>
             </div>
